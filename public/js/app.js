@@ -24,9 +24,14 @@ weatherForm.addEventListener('submit', ev => {
       if (res.error) {
         weatherError.textContent = res.error
       } else {
-        weatherResult.textContent = res.location;
+        weatherResult.textContent = 'Miesto: '+res.location;
         const temps = res.forecast.temp.feels_like;
-        tempResult.innerText = res.forecast.daily +'\r\n' + 'Denna teplota '+ res.forecast.temp.feels_like.day+' °C'+'\r\n'+'Nocna teplota '+ res.forecast.temp.feels_like.night+' °C' +'\r\n' +'Rychlost vetra '+ res.forecast.temp.wind_speed+' m/s'
+        tempResult.innerText = res.forecast.daily +'\r\n' +
+        'Aktualna teplota '+ res.forecast.current.temp+' °C'+'\r\n'+
+        'Pocitova teplota '+ res.forecast.current.feels_like+' °C'+'\r\n'+'\r\n'+
+        'Max denna teplota '+ res.forecast.temp.temp.day+' °C'+'\r\n'+
+        'Min nocna teplota '+ res.forecast.temp.temp.night+' °C' +'\r\n'+
+        'Rychlost vetra '+ res.forecast.temp.wind_speed+' m/s';
       }
     } )
     .catch(err => {
