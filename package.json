@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
+    "start:dev": "nodemon src/app.js -e js, hbs, css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +16,8 @@
     "hbs": "^4.1.1",
     "request": "^2.88.0",
     "tslint": "^6.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
