@@ -20,7 +20,10 @@ function forecast(lat, lon, cb) {
     } else if (res.body.cod === '400') {
       cb('nothing found for this place')
     } else {
-      const data = res.body.daily[0].weather[0].description;
+      const data = {
+        daily: res.body.daily[0].weather[0].description,
+        temp: res.body.daily[0]
+      }
      cb(undefined, data);
     }
   })
