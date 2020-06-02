@@ -22,6 +22,7 @@ function forecast(lat, lon, cb) {
     } else {
       const data = {
         daily: res.body.daily[0].weather[0].description,
+        current: res.body.current,
         temp: res.body.daily[0]
       }
      cb(undefined, data);
