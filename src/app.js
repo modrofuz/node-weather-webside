@@ -46,7 +46,7 @@ app.get('/about', (req, res) => {
    res.sendFile(publicDirectoryPath+'/about.html') */
   res.render('about', {
     title: 'About me',
-    name: 'Modrofuzz'
+    name: 'Modrofuzzzz'
   })
 })
 
