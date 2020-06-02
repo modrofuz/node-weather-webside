@@ -8,7 +8,9 @@ weatherForm.addEventListener('submit', ev => {
   weatherError.textContent ='';
   weatherResult.textContent ='';
   ev.preventDefault();
-  const result = fetch("http://localhost:3000/weather?address=" + inputLoc.value)
+  
+  // const result = fetch("http://localhost:3000/weather?address=" + inputLoc.value)
+  const result = fetch("/weather?address=" + inputLoc.value)
     .then(res => {
       if (!res.ok) {
         throw Error('error while requesting')
