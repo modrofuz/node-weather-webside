@@ -28,7 +28,7 @@ hbs.registerPartials(partialsPath);
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'Weather App',
-    name: 'Andrew Mead'
+    name: 'Modrofuz'
   })
 })
 
@@ -36,7 +36,7 @@ app.get('/help', (req, res) => {
   // res.sendFile(publicDirectoryPath+'/help.html')
   res.render('help', {
     title: 'Weather App',
-    name: 'Andrewm',
+    name: 'Modrofuz',
     message: 'FY'
   })
 })
@@ -46,7 +46,7 @@ app.get('/about', (req, res) => {
    res.sendFile(publicDirectoryPath+'/about.html') */
   res.render('about', {
     title: 'About me',
-    name: 'Andrew Mead'
+    name: 'Modrofuz'
   })
 })
 
@@ -91,7 +91,7 @@ app.get('/products', (req, res) => {
 //The 404 Route (ALWAYS Keep this as the last route)
 app.get('*', (req, res) => {
 
-  res.render('404', { title: 'Sorry, page not found', name: 'Andrew Mead', error: 'req.error' })
+  res.render('404', { title: 'Sorry, page not found', name: 'Modrofuz', error: 'req.error' })
 });
 
 app.listen(port, () => {
